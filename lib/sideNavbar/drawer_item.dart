@@ -4,6 +4,7 @@ import 'package:layouts/pages/bottom_navbar.dart';
 import 'package:layouts/pages/carousel.dart';
 import 'package:layouts/pages/first_card.dart';
 
+import '../pages/listView.dart';
 import '../pages/second_card.dart';
 
 class DrawerItems extends StatelessWidget {
@@ -58,6 +59,21 @@ class DrawerItems extends StatelessWidget {
           onTap: () {
             Navigator.pop(context);
             Navigator.of(context).push(MaterialPageRoute(builder: (context) => SecondCard()));
+          },
+        ),
+        const Divider(
+          height: 2,
+          color: Colors.black,
+          thickness: 1, // thickness of the line
+          indent: 20, // empty space to the leading edge of divider.
+          endIndent: 20,
+        ),
+        ListTile(
+          leading: Icon(Icons.list),
+          title: Text('List View'),
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => List_View()));
           },
         ),
       ],

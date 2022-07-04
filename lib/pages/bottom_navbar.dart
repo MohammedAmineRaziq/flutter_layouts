@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:layouts/pages/profile.dart';
-import 'package:layouts/pages/list.dart';
 
 import '../main.dart';
+import 'listView.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   final screens = [
     Home(),
     Profile(),
-    List()
+    List_View()
   ];
 
   @override
@@ -54,9 +53,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
                   selectedIcon: Icon(Icons.person),
                   label: "Profile"),
               NavigationDestination(
-                  icon:Icon(Icons.search_outlined),
-                  selectedIcon: Icon(Icons.search),
-                  label: "Search"),
+                  icon:Icon(Icons.list_alt_outlined),
+                  selectedIcon: Icon(Icons.list_alt),
+                  label: "List"),
             ],
           ),
         )
